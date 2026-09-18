@@ -169,7 +169,7 @@ body {
   transition: all 0.3s ease;
   color: var(--color-text-primary);
 }
-.switch-btn:hover {
+.switch-btn:not(.active):hover {
   background-color: var(--color-bg-container);
 }
 .switch-btn.active {
@@ -179,7 +179,7 @@ body {
 .switch-btn:nth-child(2) {
   color: var(--color-text-primary);
 }
-.switch-btn:nth-child(2):hover {
-  color: var(--color-text-inverse);
+.switch-btn:nth-child(2):not(.active):hover {
   background-color: var(--color-border-inverse);
+  color: var(--color-text-inverse);
 }/*# sourceMappingURL=style.css.map */
