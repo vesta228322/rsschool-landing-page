@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+:root {
+  --color-text-primary: #403F3D;
+  --color-text-inverse: #E1D4C9;
+  --color-text-accent: #B0907A;
+  --color-bg-page: #E1D4C9;
+  --color-bg-container: #665F55;
+  --color-bg-overlay: #403F3D;
+  --color-border-primary: #C1B6AD;
+  --color-border-inverse: #665F55;
+}
+
+[data-theme=dark] {
+  --color-text-primary: #E1D4C9;
+  --color-text-inverse: #E1D4C9;
+  --color-text-accent: #B0907A;
+  --color-bg-page: #292826;
+  --color-bg-container: #403F3D;
+  --color-bg-overlay: #292826;
+  --color-border-primary: #665F55;
+  --color-border-inverse: #C1B6AD;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: var(--color-bg-page);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 60px;
+}
+.header__logo a {
+  color: var(--color-text-primary);
+}
+.header__container {
+  display: inherit;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 1360px;
+  height: inherit;
+}
+.header__nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style-type: none;
+  gap: 40px;
+}
+.header__nav-list a {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color-text-primary);
+  text-decoration: none;
+}
+.header__theme {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 184px;
+  height: 44px;
+}
+.header__theme-switch {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2px;
+  gap: 8px;
+  width: 88px;
+  height: 44px;
+  border: 1px solid var(--color-border-primary);
+  border-radius: 100px;
+}
+.header__menu {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 72px;
+  height: 28px;
+  gap: 8px;
+  color: var(--color-text-primary);
+}
+.header__menu::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-text-primary);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.header__menu:hover::after {
+  width: 100%;
+}
+.header__menu a {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color-text-primary);
+  text-decoration: none;
+}
+
+.switch-btn {
+  cursor: pointer;
+  z-index: 10;
+  width: 36px;
+  height: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100%;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  color: var(--color-text-primary);
+}
+.switch-btn:hover {
+  background-color: var(--color-bg-container);
+}
+.switch-btn.active {
+  background-color: var(--color-text-accent);
+  color: var(--color-text-inverse);
+}
+.switch-btn:nth-child(2) {
+  color: var(--color-text-primary);
+}
+.switch-btn:nth-child(2):hover {
+  color: var(--color-text-inverse);
+  background-color: var(--color-border-inverse);
+}/*# sourceMappingURL=style.css.map */
