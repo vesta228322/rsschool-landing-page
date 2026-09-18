@@ -275,4 +275,106 @@ body {
   font-weight: 600;
   font-size: 16px;
   line-height: 150%;
+}
+
+.slider__container {
+  position: relative;
+  width: 1360px;
+  margin: 0 auto;
+}
+.slider__title {
+  height: 75px;
+  margin-bottom: 40px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 125%;
+  text-align: center;
+  color: var(--color-text-primary);
+}
+.slider__title span {
+  font-style: italic;
+  color: var(--color-text-accent);
+}
+.slider__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 20px;
+}
+.slider__coffee-name {
+  margin-bottom: 16px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 125%;
+  text-align: center;
+  color: var(--color-text-primary);
+}
+.slider__descr {
+  width: 480px;
+  margin: 0 auto;
+  margin-bottom: 16px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: var(--color-text-primary);
+}
+.slider__price {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 125%;
+  text-align: center;
+  color: var(--color-text-primary);
+  margin-bottom: 40px;
+}
+.slider__btn {
+  cursor: pointer;
+  color: var(--color-border-inverse);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.slider__btn:hover {
+  width: 60px;
+  height: 60px;
+  background: var(--color-bg-container);
+  color: var(--color-text-inverse);
+  border-radius: 100px;
+}
+.slider__btn.btn-prev {
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+.slider__btn.btn-next {
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+.slider__dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 12px;
+}
+.slider__dots .dot {
+  width: 40px;
+  height: 4px;
+  background: var(--color-border-primary);
+  border-radius: 100px;
+}
+.slider__dots .dot.active {
+  background: var(--color-border-inverse);
 }/*# sourceMappingURL=style.css.map */

@@ -196,7 +196,7 @@ body {
         padding-left: 25px;
         width: 200px;
         height: 64px;
-        background: var(--color-bg-page);        
+        background: var(--color-bg-page);
         border: none;
         border-radius: 100px;
         overflow: hidden;
@@ -208,14 +208,15 @@ body {
             transform: translateX(95px);
             transition: transform 0.3s ease-in-out;
         }
-        
+
         &:hover {
             padding-left: 0;
+
             & .hero__btn-ico {
                 transform: translateX(0);
             }
         }
-        
+
         &:active {
             filter: brightness(0.9);
         }
@@ -228,6 +229,114 @@ body {
             font-size: 16px;
             line-height: 150%;
 
+        }
+    }
+}
+
+.slider {
+
+    &__container {
+        position: relative;
+        width: 1360px;
+        margin: 0 auto;
+    }
+
+    &__title {
+        height: 75px;
+        margin-bottom: 40px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 60px;
+        line-height: 125%;
+        text-align: center;
+        color: var(--color-text-primary);
+
+        span {
+            font-style: italic;
+            color: var(--color-text-accent);
+        }
+    }
+
+    &__img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    &__coffee-name {
+        margin-bottom: 16px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 125%;
+        text-align: center;
+        color: var(--color-text-primary);
+    }
+
+    &__descr {
+        width: 480px;
+        margin: 0 auto;
+        margin-bottom: 16px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        text-align: center;
+        color: var(--color-text-primary);
+    }
+
+    &__price {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 125%;
+        text-align: center;
+        color: var(--color-text-primary);
+        margin-bottom: 40px;
+    }
+
+    &__btn {
+        cursor: pointer;
+        color: var(--color-border-inverse);
+        transition: all 0.3s ease;
+
+        &:hover {
+            width: 60px;
+            height: 60px;
+            background: var(--color-bg-container);
+            color: var(--color-text-inverse);
+            border-radius: 100px;
+
+        }
+
+        &.btn-prev {
+            position: absolute;
+            left: 0;
+            top: 50%;
+        }
+
+        &.btn-next {
+            position: absolute;
+            right: 0;
+            top: 50%;
+        }
+    }
+
+    &__dots {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+
+        .dot {
+            width: 40px;
+            height: 4px;
+            background: var(--color-border-primary);
+            border-radius: 100px;
+
+            &.active {
+                background: var(--color-border-inverse);
+            }
         }
     }
 }
