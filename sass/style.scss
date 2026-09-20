@@ -300,14 +300,16 @@ body {
     &__btn {
         cursor: pointer;
         color: var(--color-border-inverse);
-        transition: all 0.3s ease;
+        border-radius: 100%;
+        transition: color 0.3s, background-color 0.3s;
+
+        svg {
+            display: block;
+        }
 
         &:hover {
-            width: 60px;
-            height: 60px;
-            background: var(--color-bg-container);
+            background-color: var(--color-bg-container);
             color: var(--color-text-inverse);
-            border-radius: 100px;
 
         }
 
@@ -448,5 +450,126 @@ body {
         display: flex;
         color: var(--color-text-primary);
         gap: 20px;
+
+        svg {
+            border-radius: 32px;
+            transition: color 0.3s ease, background-color 0.3s ease;
+            cursor: pointer;
+
+            &:hover {
+                color: var(--color-text-inverse);
+                background-color: var(--color-bg-container);
+            }
+        }
+    }
+}
+
+.footer {
+    margin-bottom: 40px;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        gap: 100px;
+        width: 1360px;
+        padding: 100px;
+        background: var(--color-bg-container);
+        border-radius: 40px;
+        margin: 0 auto;
+    }
+
+    &__title {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 60px;
+        line-height: 125%;
+        color: var(--color-text-inverse);
+
+        span {
+            font-style: italic;
+            color: var(--color-text-accent);
+        }
+    }
+
+    &__wrapp {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    &__icons {
+        cursor: pointer;
+        color: var(--color-text-inverse);
+        display: flex;
+        gap: 12px;
+
+        svg {
+            border-radius: 100%;
+            transition: color 0.3s ease, background-color 0.3s ease;
+
+            &:hover {
+                color: var(--color-text-primary);
+                background: var(--color-bg-page);
+            }
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        width: 530px;
+
+        &-title {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 125%;
+            color: var(--color-text-inverse);
+        }
+
+        &-links {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+        }
+
+        &-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        svg {
+            flex-shrink: 0;
+            align-self: center;
+        }
+
+        a,
+        p {
+            position: relative;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 150%;
+            color: var(--color-text-inverse);
+            text-decoration: none;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 0;
+                height: 2px;
+                background-color: var(--color-text-inverse);
+                transition: all 0.3s ease;
+            }
+
+            &:hover {
+                &::after {
+                    width: calc(100% + 28px);
+                }
+            }
+        }
     }
 }
