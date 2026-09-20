@@ -672,6 +672,95 @@ body {
   width: calc(100% + 28px);
 }
 
+.container {
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+.cards__title {
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 125%;
+  text-align: center;
+  color: var(--color-text-primary);
+  display: block;
+  width: 800px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+.cards__title span {
+  font-style: italic;
+  color: var(--color-text-accent);
+}
+.cards__tabs {
+  width: 361px;
+  height: 46px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+}
+.cards__tabs-wrapp {
+  border: 1px solid var(--color-border-primary);
+  border-radius: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 8px 16px 8px 8px;
+  gap: 8px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.cards__tabs-wrapp .emoji {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background-color: var(--color-border-primary);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 12px;
+  padding-bottom: 3px;
+}
+.cards__tabs-wrapp .tabs-text {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color-text-primary);
+}
+.cards__tabs-wrapp.active {
+  background-color: var(--color-bg-container);
+}
+.cards__tabs-wrapp.active .emoji {
+  background-color: var(--color-bg-page);
+}
+.cards__tabs-wrapp.active .tabs-text {
+  color: var(--color-text-inverse);
+}
+.cards__tabs-wrapp:hover {
+  background-color: var(--color-bg-container);
+}
+.cards__tabs-wrapp:hover .emoji {
+  background-color: var(--color-bg-page);
+}
+.cards__tabs-wrapp:hover .tabs-text {
+  color: var(--color-text-inverse);
+}
+
 @media (max-width: 768px) {
   body:has(.header__nav.open) {
     overflow: hidden;

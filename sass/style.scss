@@ -610,6 +610,96 @@ body {
     }
 }
 
+.container {
+    max-width: 1360px;
+    margin: 0 auto;
+}
+
+.cards {
+
+    &__title {
+        font-weight: 600;
+        font-size: 60px;
+        line-height: 125%;
+        text-align: center;
+        color: var(--color-text-primary);
+        display: block;
+        width: 800px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+
+        span {
+            font-style: italic;
+            color: var(--color-text-accent);
+        }
+    }
+
+    &__tabs {
+        width: 361px;
+        height: 46px;
+        margin: 0 auto;
+        display: flex;
+        gap: 16px;
+
+        &-wrapp {
+            border: 1px solid var(--color-border-primary);
+            border-radius: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px 16px 8px 8px;
+            gap: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            .emoji {
+                width: 30px;
+                height: 30px;
+                border-radius: 100%;
+                background-color: var(--color-border-primary);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 12px;
+                padding-bottom: 3px;
+            }
+
+            .tabs-text {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 150%;
+                color: var(--color-text-primary);
+            }
+
+            &.active {
+                background-color: var(--color-bg-container);
+
+                .emoji {
+                    background-color: var(--color-bg-page);
+                }
+
+                .tabs-text {
+                    color: var(--color-text-inverse);
+                }
+            }
+
+            &:hover {
+                background-color: var(--color-bg-container);
+
+                .emoji {
+                    background-color: var(--color-bg-page);
+                }
+
+                .tabs-text {
+                    color: var(--color-text-inverse);
+                }
+            }
+        }
+    }
+
+
+}
+
 @media (max-width: 768px) {
 
     body:has(.header__nav.open) {
