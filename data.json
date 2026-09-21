@@ -1,0 +1,66 @@
+[
+    {
+        "category": "coffee",
+        "image": "img/tabs-img/coffee/coffee-1.jpg",
+        "alt": "Irish coffee",
+        "name": "Irish coffee",
+        "description": "Fragrant black coffee with Jameson Irish whiskey and whipped milk",
+        "price": 7
+    },
+    {
+        "category": "coffee",
+        "image": "img/tabs-img/coffee/coffee-2.jpg",
+        "alt": "Kahlua coffee",
+        "name": "Kahlua coffee",
+        "description": "Classic coffee with milk and Kahlua liqueur under a cap of frothed milk",
+        "price": 7
+    },
+    {
+        "category": "coffee",
+        "image": "img/tabs-img/coffee/coffee-3.jpg",
+        "alt": "Honey raf",
+        "name": "Honey raf",
+        "description": "Espresso with frothed milk, cream and aromatic honey",
+        "price": 5.5
+    },
+    {
+        "category": "coffee",
+        "image": "img/tabs-img/coffee/coffee-4.jpg",
+        "alt": "Ice cappuccino",
+        "name": "Ice cappuccino",
+        "description": "Cappuccino with soft thick foam in summer version with ice",
+        "price": 5
+    },
+    {
+        "category": "coffee",
+        "image": "img/tabs-img/coffee/coffee-5.jpg",
+        "alt": "Espresso",
+        "name": "Espresso",
+        "description": "Classic black coffee",
+        "price": 4.5
+    },
+    {
+        "category": "coffee",
+        "image": "img/tabs-img/coffee/coffee-6.jpg",
+        "alt": "Latte",
+        "name": "Latte",
+        "description": "Espresso coffee with the addition of steamed milk and dense milk foam",
+        "price": 5.5
+    },
+    {
+        "category": "coffee",
+        "image": "img/tabs-img/coffee/coffee-7.jpg",
+        "alt": "Latte macchiato",
+        "name": "Latte macchiato",
+        "description": "Espresso with frothed milk and chocolate",
+        "price": 5.5
+    },
+    {
+        "category": "coffee",
+        "image": "img/tabs-img/coffee/coffee-8.jpg",
+        "alt": "Coffee with cognac",
+        "name": "Coffee with cognac",
+        "description": "Fragrant black coffee with cognac and whipped cream",
+        "price": 6.5
+    }
+]
