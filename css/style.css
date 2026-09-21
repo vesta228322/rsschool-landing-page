@@ -567,8 +567,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: var(--color-text-primary);
   gap: 20px;
+}
+.app__btns a {
+  color: var(--color-text-primary);
 }
 .app__btns svg {
   border-radius: 32px;
@@ -626,6 +628,9 @@ body {
   display: -ms-flexbox;
   display: flex;
   gap: 12px;
+}
+.footer__icons a {
+  color: var(--color-text-inverse);
 }
 .footer__icons svg {
   border-radius: 100%;

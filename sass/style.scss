@@ -516,8 +516,11 @@ body {
 
     &__btns {
         display: flex;
-        color: var(--color-text-primary);
         gap: 20px;
+        
+        a {
+            color: var(--color-text-primary);
+        }
 
         svg {
             border-radius: 32px;
@@ -570,6 +573,10 @@ body {
         color: var(--color-text-inverse);
         display: flex;
         gap: 12px;
+
+        a {
+            color: var(--color-text-inverse);
+        }
 
         svg {
             border-radius: 100%;
