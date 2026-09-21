@@ -80,12 +80,27 @@ body {
   gap: 40px;
 }
 .header__nav-list a {
+  position: relative;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
   line-height: 150%;
   color: var(--color-text-primary);
   text-decoration: none;
+}
+.header__nav-list a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-text-primary);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.header__nav-list a:hover::after {
+  width: 100%;
 }
 .header__theme {
   display: -webkit-box;
