@@ -891,8 +891,18 @@ body {
   line-height: 125%;
   color: var(--color-text-primary);
 }
-.cards .load {
+.cards .load-more {
   display: none;
+}
+.cards .spinner {
+  -webkit-mask: url("../img/spinner.svg") no-repeat center;
+          mask: url("../img/spinner.svg") no-repeat center;
+  background-color: var(--color-text-primary);
+  height: 150px;
+  display: none;
+}
+.cards .spinner.active {
+  display: block;
 }
 
 @media (max-width: 1200px) {

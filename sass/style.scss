@@ -825,8 +825,19 @@ body {
         color: var(--color-text-primary);
     }
 
-    .load {
+    .load-more {
         display: none;
+    }
+
+    .spinner {
+        mask: url('../img/spinner.svg') no-repeat center;
+        background-color: var(--color-text-primary);
+        height: 150px;
+        display: none;
+
+        &.active {
+            display: block;
+        }
     }
 
 }
