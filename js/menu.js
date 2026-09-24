@@ -21,17 +21,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function init() {
         try {
-            if (spinner) {
-                spinner.classList.add('active');
-            }
+            spinner.classList.add('active');
+            
             cardsData = await getData();
+
             renderCard('coffee');
         } catch (e) {
             console.error('Что-то пошло не так', e);
         } finally {
-            if (spinner) {
-                spinner.classList.remove('active');
-            }
+            spinner.classList.remove('active');
         }
     }
 
@@ -41,12 +39,13 @@ document.addEventListener('DOMContentLoaded', () => {
     let cardsToShow = 4;
     let currentCategory = 'coffee';
 
-    if (loadMore) {
-        loadMore.addEventListener('click', () => {
-            cardsToShow += 4;
-            renderCard(currentCategory);
-        });
-    }
+
+    loadMore.addEventListener('click', () => {
+        cardsToShow += 4;
+        renderCard(currentCategory);
+
+    });
+
 
     function renderCard(category) {
 
