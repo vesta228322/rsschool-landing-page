@@ -1,3 +1,4 @@
+'use strict';
 document.addEventListener('DOMContentLoaded', () => {
     const btnDark = document.querySelector('#dark');
     const btnLight = document.querySelector('#light');
@@ -31,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function getData() {
         try {
-            const res = await fetch('../data.json');
+            const res = await fetch('./data.json');
 
             if (!res.ok) {
                 throw new Error(`Ошибка: ${res.status}`);
@@ -44,22 +45,37 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const spinner = document.querySelector('.spinner');
-    
+
     async function init() {
         try {
-            spinner.classList.add('active');
+            if (spinner) {
+                spinner.classList.add('active');
+            }
             cardsData = await getData();
             renderCard('coffee');
-            spinner.classList.remove('active');
         } catch (e) {
             console.error('Что-то пошло не так', e);
         } finally {
-            spinner.classList.remove('active');
+            if (spinner) {
+                spinner.classList.remove('active');
+            }
         }
     }
 
+    const cardsContent = document.querySelector('.cards__content');
+    const loadMore = document.querySelector('.load-more');
+
+    let cardsToShow = 4;
+    let currentCategory = 'coffee';
+
+    if (loadMore) {
+        loadMore.addEventListener('click', () => {
+            cardsToShow += 4;
+            renderCard(currentCategory);
+        });
+    }
+
     function renderCard(category) {
-        const cardsContent = document.querySelector('.cards__content');
 
         cardsContent.innerHTML = '';
 
@@ -67,7 +83,9 @@ document.addEventListener('DOMContentLoaded', () => {
             return card.category === category;
         });
 
-        filterCards.forEach(card => {
+        const showCards = filterCards.slice(0, cardsToShow);
+
+        showCards.forEach(card => {
             cardsContent.innerHTML += `
             <div class="cards__item">
                 <div class="cards__photo-wrapper">
@@ -86,6 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
             `
         });
+
     }
 
     const tabs = document.querySelectorAll('.cards__tabs-wrapp');
@@ -100,8 +119,10 @@ document.addEventListener('DOMContentLoaded', () => {
             e.currentTarget.classList.add('active');
 
             const category = e.currentTarget.dataset.category;
+            currentCategory = category
 
-            renderCard(category);
+            cardsToShow = 4;
+            renderCard(currentCategory);
         });
 
     });

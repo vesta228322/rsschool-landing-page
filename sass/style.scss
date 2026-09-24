@@ -670,6 +670,7 @@ body {
 .container {
     max-width: 1360px;
     margin: 0 auto;
+    text-align: center;
 }
 
 .cards {
@@ -826,7 +827,21 @@ body {
     }
 
     .load-more {
-        display: none;
+        display: inline-block;
+        margin-top: 40px;
+        color: var(--color-text-primary);
+        border-radius: 100%;
+        cursor: pointer;
+        transition: color 0.3s, background-color 0.3s;
+
+        svg {
+            display: block;
+        }
+
+        &:hover {
+            background-color: var(--color-bg-container);
+            color: var(--color-text-inverse)
+        }
     }
 
     .spinner {
@@ -955,17 +970,6 @@ body {
 
         &__title {
             width: 688px;
-        }
-
-        &__item:nth-child(n+5) {
-            display: none;
-        }
-
-        .load {
-            display: flex;
-            justify-content: center;
-            margin-top: 40px;
-            color: var(--color-text-primary);
         }
     }
 }
@@ -1096,7 +1100,7 @@ body {
 
             &.item-2,
             &.item-3 {
-                display: none;
+                display: block;
             }
         }
     }
