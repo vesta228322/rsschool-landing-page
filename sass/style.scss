@@ -326,6 +326,17 @@ body {
         position: relative;
         width: 1360px;
         margin: 0 auto;
+        overflow: hidden;
+    }
+
+    &__wrapper {
+        display: flex;
+        transition: transform 0.6s ease-out;
+    }
+
+    &__content {
+        width: 1360px;
+        flex-shrink: 0;
     }
 
     &__title {
@@ -422,6 +433,7 @@ body {
             background: var(--color-border-primary);
             border-radius: 100px;
             cursor: pointer;
+            transition: all 0.3s ease;
 
             &.active {
                 background: var(--color-border-inverse);
@@ -875,6 +887,10 @@ body {
         &__container {
             width: 1120px;
         }
+        
+        &__content {
+            width: 1120px;
+        }
     }
 
     .about {
@@ -916,6 +932,10 @@ body {
 
     .slider {
         &__container {
+            width: 944px;
+        }
+
+        &__content {
             width: 944px;
         }
     }
@@ -1064,6 +1084,10 @@ body {
             width: 688px;
         }
 
+        &__content {
+            width: 688px;
+        }
+
         &__descr {
             width: 100%;
         }
@@ -1100,7 +1124,7 @@ body {
 
             &.item-2,
             &.item-3 {
-                display: block;
+                display: none;
             }
         }
     }
@@ -1139,6 +1163,10 @@ body {
 
     .slider {
         &__container {
+            width: 496px;
+        }
+
+        &__content {
             width: 496px;
         }
 
@@ -1216,6 +1244,10 @@ body {
 
     .slider {
         &__container {
+            width: 348px;
+        }
+
+        &__content {
             width: 348px;
         }
 
