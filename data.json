@@ -1,162 +1,742 @@
 [
-    {
-        "category": "coffee",
-        "image": "img/tabs-img/coffee/coffee-1.jpg",
-        "alt": "Irish coffee",
-        "name": "Irish coffee",
-        "description": "Fragrant black coffee with Jameson Irish whiskey and whipped milk",
-        "price": 7
+  {
+    "id": 1,
+    "image": "img/tabs-img/coffee/coffee-1.jpg",
+    "name": "Irish coffee",
+    "alt": "Irish coffee",
+    "description": "Fragrant black coffee with Jameson Irish whiskey and whipped milk",
+    "price": "7.00",
+    "category": "coffee",
+    "sizes": {
+      "s": {
+        "size": "200 ml",
+        "add-price": "0.00"
+      },
+      "m": {
+        "size": "300 ml",
+        "add-price": "0.50"
+      },
+      "l": {
+        "size": "400 ml",
+        "add-price": "1.00"
+      }
     },
-    {
-        "category": "coffee",
-        "image": "img/tabs-img/coffee/coffee-2.jpg",
-        "alt": "Kahlua coffee",
-        "name": "Kahlua coffee",
-        "description": "Classic coffee with milk and Kahlua liqueur under a cap of frothed milk",
-        "price": 7
+    "additives": [
+      {
+        "name": "Sugar",
+        "add-price": "0.50"
+      },
+      {
+        "name": "Cinnamon",
+        "add-price": "0.50"
+      },
+      {
+        "name": "Syrup",
+        "add-price": "0.50"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "image": "img/tabs-img/coffee/coffee-2.jpg",
+    "name": "Kahlua coffee",
+    "alt": "Kahlua coffee",
+    "description": "Classic coffee with milk and Kahlua liqueur under a cap of frothed milk",
+    "price": "7.00",
+    "category": "coffee",
+    "sizes": {
+      "s": {
+        "size": "200 ml",
+        "add-price": "0.00"
+      },
+      "m": {
+        "size": "300 ml",
+        "add-price": "0.50"
+      },
+      "l": {
+        "size": "400 ml",
+        "add-price": "1.00"
+      }
     },
-    {
-        "category": "coffee",
-        "image": "img/tabs-img/coffee/coffee-3.jpg",
-        "alt": "Honey raf",
-        "name": "Honey raf",
-        "description": "Espresso with frothed milk, cream and aromatic honey",
-        "price": 5.5
+    "additives": [
+      {
+        "name": "Sugar",
+        "add-price": "0.50"
+      },
+      {
+        "name": "Cinnamon",
+        "add-price": "0.50"
+      },
+      {
+        "name": "Syrup",
+        "add-price": "0.50"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "image": "img/tabs-img/coffee/coffee-3.jpg",
+    "name": "Honey raf",
+    "alt": "Honey raf",
+    "description": "Espresso with frothed milk, cream and aromatic honey",
+    "price": "5.50",
+    "category": "coffee",
+    "sizes": {
+      "s": {
+        "size": "200 ml",
+        "add-price": "0.00"
+      },
+      "m": {
+        "size": "300 ml",
+        "add-price": "0.50"
+      },
+      "l": {
+        "size": "400 ml",
+        "add-price": "1.00"
+      }
     },
-    {
-        "category": "coffee",
-        "image": "img/tabs-img/coffee/coffee-4.jpg",
-        "alt": "Ice cappuccino",
-        "name": "Ice cappuccino",
-        "description": "Cappuccino with soft thick foam in summer version with ice",
-        "price": 5
+    "additives": [
+      {
+        "name": "Sugar",
+        "add-price": "0.50"
+      },
+      {
+        "name": "Cinnamon",
+        "add-price": "0.50"
+      },
+      {
+        "name": "Syrup",
+        "add-price": "0.50"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "image": "img/tabs-img/coffee/coffee-4.jpg",
+    "name": "Ice cappuccino",
+    "alt": "Ice cappuccino",
+    "description": "Cappuccino with soft thick foam in summer version with ice",
+    "price": "5.00",
+    "category": "coffee",
+    "sizes": {
+      "s": {
+        "size": "200 ml",
+        "add-price": "0.00"
+      },
+      "m": {
+        "size": "300 ml",
+        "add-price": "0.50"
+      },
+      "l": {
+        "size": "400 ml",
+        "add-price": "1.00"
+      }
     },
-    {
-        "category": "coffee",
-        "image": "img/tabs-img/coffee/coffee-5.jpg",
-        "alt": "Espresso",
-        "name": "Espresso",
-        "description": "Classic black coffee",
-        "price": 4.5
+    "additives": [
+      {
+        "name": "Sugar",
+        "add-price": "0.50"
+      },
+      {
+        "name": "Cinnamon",
+        "add-price": "0.50"
+      },
+      {
+        "name": "Syrup",
+        "add-price": "0.50"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "image": "img/tabs-img/coffee/coffee-5.jpg",
+    "name": "Espresso",
+    "alt": "Espresso",
+    "description": "Classic black coffee",
+    "price": "4.50",
+    "category": "coffee",
+    "sizes": {
+      "s": {
+        "size": "200 ml",
+        "add-price": "0.00"
+      },
+      "m": {
+        "size": "300 ml",
+        "add-price": "0.50"
+      },
+      "l": {
+        "size": "400 ml",
+        "add-price": "1.00"
+      }
     },
-    {
-        "category": "coffee",
-        "image": "img/tabs-img/coffee/coffee-6.jpg",
-        "alt": "Latte",
-        "name": "Latte",
-        "description": "Espresso coffee with the addition of steamed milk and dense milk foam",
-        "price": 5.5
+    "additives": [
+      {
+        "name": "Sugar",
+        "add-price": "0.50"
+      },
+      {
+        "name": "Cinnamon",
+        "add-price": "0.50"
+      },
+      {
+        "name": "Syrup",
+        "add-price": "0.50"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "image": "img/tabs-img/coffee/coffee-6.jpg",
+    "name": "Latte",
+    "alt": "Latte",
+    "description": "Espresso coffee with the addition of steamed milk and dense milk foam",
+    "price": "5.50",
+    "category": "coffee",
+    "sizes": {
+      "s": {
+        "size": "200 ml",
+        "add-price": "0.00"
+      },
+      "m": {
+        "size": "300 ml",
+        "add-price": "0.50"
+      },
+      "l": {
+        "size": "400 ml",
+        "add-price": "1.00"
+      }
     },
-    {
-        "category": "coffee",
-        "image": "img/tabs-img/coffee/coffee-7.jpg",
-        "alt": "Latte macchiato",
-        "name": "Latte macchiato",
-        "description": "Espresso with frothed milk and chocolate",
-        "price": 5.5
+    "additives": [
+      {
+        "name": "Sugar",
+        "add-price": "0.50"
+      },
+      {
+        "name": "Cinnamon",
+        "add-price": "0.50"
+      },
+      {
+        "name": "Syrup",
+        "add-price": "0.50"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "image": "img/tabs-img/coffee/coffee-7.jpg",
+    "name": "Latte macchiato",
+    "alt": "Latte macchiato",
+    "description": "Espresso with frothed milk and chocolate",
+    "price": "5.50",
+    "category": "coffee",
+    "sizes": {
+      "s": {
+        "size": "200 ml",
+        "add-price": "0.00"
+      },
+      "m": {
+        "size": "300 ml",
+        "add-price": "0.50"
+      },
+      "l": {
+        "size": "400 ml",
+        "add-price": "1.00"
+      }
     },
-    {
-        "category": "coffee",
-        "image": "img/tabs-img/coffee/coffee-8.jpg",
-        "alt": "Coffee with cognac",
-        "name": "Coffee with cognac",
-        "description": "Fragrant black coffee with cognac and whipped cream",
-        "price": 6.5
+    "additives": [
+      {
+        "name": "Sugar",
+        "add-price": "0.50"
+      },
+      {
+        "name": "Cinnamon",
+        "add-price": "0.50"
+      },
+      {
+        "name": "Syrup",
+        "add-price": "0.50"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "image": "img/tabs-img/coffee/coffee-8.jpg",
+    "name": "Coffee with cognac",
+    "alt": "Coffee with cognac",
+    "description": "Fragrant black coffee with cognac and whipped cream",
+    "price": "6.50",
+    "category": "coffee",
+    "sizes": {
+      "s": {
+        "size": "200 ml",
+        "add-price": "0.00"
+      },
+      "m": {
+        "size": "300 ml",
+        "add-price": "0.50"
+      },
+      "l": {
+        "size": "400 ml",
+        "add-price": "1.00"
+      }
     },
-    {
-        "category": "tea",
-        "image": "img/tabs-img/tea/tea-1.png",
-        "alt": "Moroccan",
-        "name": "Moroccan",
-        "description": "Fragrant black tea with the addition of tangerine, cinnamon, honey, lemon and mint",
-        "price": 4.5
+    "additives": [
+      {
+        "name": "Sugar",
+        "add-price": "0.50"
+      },
+      {
+        "name": "Cinnamon",
+        "add-price": "0.50"
+      },
+      {
+        "name": "Syrup",
+        "add-price": "0.50"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "image": "img/tabs-img/tea/tea-1.png",
+    "name": "Moroccan",
+    "alt": "Moroccan",
+    "description": "Fragrant black tea with the addition of tangerine, cinnamon, honey, lemon and mint",
+    "price": "4.50",
+    "category": "tea",
+    "sizes": {
+      "s": {
+        "size": "200 ml",
+        "add-price": "0.00"
+      },
+      "m": {
+        "size": "300 ml",
+        "add-price": "0.50"
+      },
+      "l": {
+        "size": "400 ml",
+        "add-price": "1.00"
+      }
     },
-    {
-        "category": "tea",
-        "image": "img/tabs-img/tea/tea-2.png",
-        "alt": "Ginger",
-        "name": "Ginger",
-        "description": "Original black tea with fresh ginger, lemon and honey",
-        "price": 5
+    "additives": [
+      {
+        "name": "Sugar",
+        "add-price": "0.50"
+      },
+      {
+        "name": "Lemon",
+        "add-price": "0.50"
+      },
+      {
+        "name": "Syrup",
+        "add-price": "0.50"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "image": "img/tabs-img/tea/tea-2.png",
+    "name": "Ginger",
+    "alt": "Ginger",
+    "description": "Original black tea with fresh ginger, lemon and honey",
+    "price": "5.00",
+    "category": "tea",
+    "sizes": {
+      "s": {
+        "size": "200 ml",
+        "add-price": "0.00"
+      },
+      "m": {
+        "size": "300 ml",
+        "add-price": "0.50"
+      },
+      "l": {
+        "size": "400 ml",
+        "add-price": "1.00"
+      }
     },
-    {
-        "category": "tea",
-        "image": "img/tabs-img/tea/tea-3.png",
-        "alt": "Cranberry",
-        "name": "Cranberry",
-        "description": "Invigorating black tea with cranberry and honey",
-        "price": 5
+    "additives": [
+      {
+        "name": "Sugar",
+        "add-price": "0.50"
+      },
+      {
+        "name": "Lemon",
+        "add-price": "0.50"
+      },
+      {
+        "name": "Syrup",
+        "add-price": "0.50"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "image": "img/tabs-img/tea/tea-3.png",
+    "name": "Cranberry",
+    "alt": "Cranberry",
+    "description": "Invigorating black tea with cranberry and honey",
+    "price": "5.00",
+    "category": "tea",
+    "sizes": {
+      "s": {
+        "size": "200 ml",
+        "add-price": "0.00"
+      },
+      "m": {
+        "size": "300 ml",
+        "add-price": "0.50"
+      },
+      "l": {
+        "size": "400 ml",
+        "add-price": "1.00"
+      }
     },
-    {
-        "category": "tea",
-        "image": "img/tabs-img/tea/tea-4.png",
-        "alt": "Sea buckthorn",
-        "name": "Sea buckthorn",
-        "description": "Toning sweet black tea with sea buckthorn, fresh thyme and cinnamon",
-        "price": 5.5
+    "additives": [
+      {
+        "name": "Sugar",
+        "add-price": "0.50"
+      },
+      {
+        "name": "Lemon",
+        "add-price": "0.50"
+      },
+      {
+        "name": "Syrup",
+        "add-price": "0.50"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "image": "img/tabs-img/tea/tea-4.png",
+    "name": "Sea buckthorn",
+    "alt": "Sea buckthorn",
+    "description": "Toning sweet black tea with sea buckthorn, fresh thyme and cinnamon",
+    "price": "5.50",
+    "category": "tea",
+    "sizes": {
+      "s": {
+        "size": "200 ml",
+        "add-price": "0.00"
+      },
+      "m": {
+        "size": "300 ml",
+        "add-price": "0.50"
+      },
+      "l": {
+        "size": "400 ml",
+        "add-price": "1.00"
+      }
     },
-    {
-        "category": "dessert",
-        "image": "img/tabs-img/dessert/dessert-1.png",
-        "alt": "Marble cheesecake",
-        "name": "Marble cheesecake",
-        "description": "Philadelphia cheese with lemon zest on a light sponge cake and red currant jam",
-        "price": 3.5
+    "additives": [
+      {
+        "name": "Sugar",
+        "add-price": "0.50"
+      },
+      {
+        "name": "Lemon",
+        "add-price": "0.50"
+      },
+      {
+        "name": "Syrup",
+        "add-price": "0.50"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "image": "img/tabs-img/dessert/dessert-1.png",
+    "name": "Marble cheesecake",
+    "alt": "Marble cheesecake",
+    "description": "Philadelphia cheese with lemon zest on a light sponge cake and red currant jam",
+    "price": "3.50",
+    "category": "dessert",
+    "sizes": {
+      "s": {
+        "size": "50 g",
+        "add-price": "0.00"
+      },
+      "m": {
+        "size": "100 g",
+        "add-price": "0.50"
+      },
+      "l": {
+        "size": "200 g",
+        "add-price": "1.00"
+      }
     },
-    {
-        "category": "dessert",
-        "image": "img/tabs-img/dessert/dessert-2.png",
-        "alt": "Red velvet",
-        "name": "Red velvet",
-        "description": "Layer cake with cream cheese frosting",
-        "price": 4
+    "additives": [
+      {
+        "name": "Berries",
+        "add-price": "0.50"
+      },
+      {
+        "name": "Nuts",
+        "add-price": "0.50"
+      },
+      {
+        "name": "Jam",
+        "add-price": "0.50"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "image": "img/tabs-img/dessert/dessert-2.png",
+    "name": "Red velvet",
+    "alt": "Red velvet",
+    "description": "Layer cake with cream cheese frosting",
+    "price": "4.00",
+    "category": "dessert",
+    "sizes": {
+      "s": {
+        "size": "50 g",
+        "add-price": "0.00"
+      },
+      "m": {
+        "size": "100 g",
+        "add-price": "0.50"
+      },
+      "l": {
+        "size": "200 g",
+        "add-price": "1.00"
+      }
     },
-    {
-        "category": "dessert",
-        "image": "img/tabs-img/dessert/dessert-3.png",
-        "alt": "Cheesecakes",
-        "name": "Cheesecakes",
-        "description": "Soft cottage cheese pancakes with sour cream and fresh berries and sprinkled with powdered sugar",
-        "price": 4.5
+    "additives": [
+      {
+        "name": "Berries",
+        "add-price": "0.50"
+      },
+      {
+        "name": "Nuts",
+        "add-price": "0.50"
+      },
+      {
+        "name": "Jam",
+        "add-price": "0.50"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "image": "img/tabs-img/dessert/dessert-3.png",
+    "name": "Cheesecakes",
+    "alt": "Cheesecakes",
+    "description": "Soft cottage cheese pancakes with sour cream and fresh berries and sprinkled with powdered sugar",
+    "price": "4.50",
+    "category": "dessert",
+    "sizes": {
+      "s": {
+        "size": "50 g",
+        "add-price": "0.00"
+      },
+      "m": {
+        "size": "100 g",
+        "add-price": "0.50"
+      },
+      "l": {
+        "size": "200 g",
+        "add-price": "1.00"
+      }
     },
-    {
-        "category": "dessert",
-        "image": "img/tabs-img/dessert/dessert-4.png",
-        "alt": "Creme brulee",
-        "name": "Creme brulee",
-        "description": "Delicate creamy dessert in a caramel basket with wild berries",
-        "price": 4
+    "additives": [
+      {
+        "name": "Berries",
+        "add-price": "0.50"
+      },
+      {
+        "name": "Nuts",
+        "add-price": "0.50"
+      },
+      {
+        "name": "Jam",
+        "add-price": "0.50"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "image": "img/tabs-img/dessert/dessert-4.png",
+    "name": "Creme brulee",
+    "alt": "Creme brulee",
+    "description": "Delicate creamy dessert in a caramel basket with wild berries",
+    "price": "4.00",
+    "category": "dessert",
+    "sizes": {
+      "s": {
+        "size": "50 g",
+        "add-price": "0.00"
+      },
+      "m": {
+        "size": "100 g",
+        "add-price": "0.50"
+      },
+      "l": {
+        "size": "200 g",
+        "add-price": "1.00"
+      }
     },
-    {
-        "category": "dessert",
-        "image": "img/tabs-img/dessert/dessert-5.png",
-        "alt": "Pancakes",
-        "name": "Pancakes",
-        "description": "Tender pancakes with strawberry jam and fresh strawberries",
-        "price": 4.5
+    "additives": [
+      {
+        "name": "Berries",
+        "add-price": "0.50"
+      },
+      {
+        "name": "Nuts",
+        "add-price": "0.50"
+      },
+      {
+        "name": "Jam",
+        "add-price": "0.50"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "image": "img/tabs-img/dessert/dessert-5.png",
+    "name": "Pancakes",
+    "alt": "Pancakes",
+    "description": "Tender pancakes with strawberry jam and fresh strawberries",
+    "price": "4.50",
+    "category": "dessert",
+    "sizes": {
+      "s": {
+        "size": "50 g",
+        "add-price": "0.00"
+      },
+      "m": {
+        "size": "100 g",
+        "add-price": "0.50"
+      },
+      "l": {
+        "size": "200 g",
+        "add-price": "1.00"
+      }
     },
-    {
-        "category": "dessert",
-        "image": "img/tabs-img/dessert/dessert-6.png",
-        "alt": "Honey cake",
-        "name": "Honey cake",
-        "description": "Classic honey cake with delicate custard",
-        "price": 4.5
+    "additives": [
+      {
+        "name": "Berries",
+        "add-price": "0.50"
+      },
+      {
+        "name": "Nuts",
+        "add-price": "0.50"
+      },
+      {
+        "name": "Jam",
+        "add-price": "0.50"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "image": "img/tabs-img/dessert/dessert-6.png",
+    "name": "Honey cake",
+    "alt": "Honey cake",
+    "description": "Classic honey cake with delicate custard",
+    "price": "4.50",
+    "category": "dessert",
+    "sizes": {
+      "s": {
+        "size": "50 g",
+        "add-price": "0.00"
+      },
+      "m": {
+        "size": "100 g",
+        "add-price": "0.50"
+      },
+      "l": {
+        "size": "200 g",
+        "add-price": "1.00"
+      }
     },
-    {
-        "category": "dessert",
-        "image": "img/tabs-img/dessert/dessert-7.png",
-        "alt": "Chocolate cake",
-        "name": "Chocolate cake",
-        "description": "Cake with hot chocolate filling and nuts with dried apricots",
-        "price": 5.5
+    "additives": [
+      {
+        "name": "Berries",
+        "add-price": "0.50"
+      },
+      {
+        "name": "Nuts",
+        "add-price": "0.50"
+      },
+      {
+        "name": "Jam",
+        "add-price": "0.50"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "image": "img/tabs-img/dessert/dessert-7.png",
+    "name": "Chocolate cake",
+    "alt": "Chocolate cake",
+    "description": "Cake with hot chocolate filling and nuts with dried apricots",
+    "price": "5.50",
+    "category": "dessert",
+    "sizes": {
+      "s": {
+        "size": "50 g",
+        "add-price": "0.00"
+      },
+      "m": {
+        "size": "100 g",
+        "add-price": "0.50"
+      },
+      "l": {
+        "size": "200 g",
+        "add-price": "1.00"
+      }
     },
-    {
-        "category": "dessert",
-        "image": "img/tabs-img/dessert/dessert-8.png",
-        "alt": "Black forest",
-        "name": "Black forest",
-        "description": "A combination of thin sponge cake with cherry jam and light chocolate mousse",
-        "price": 6.5
-    }
+    "additives": [
+      {
+        "name": "Berries",
+        "add-price": "0.50"
+      },
+      {
+        "name": "Nuts",
+        "add-price": "0.50"
+      },
+      {
+        "name": "Jam",
+        "add-price": "0.50"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "image": "img/tabs-img/dessert/dessert-8.png",
+    "name": "Black forest",
+    "alt": "Black forest",
+    "description": "A combination of thin sponge cake with cherry jam and light chocolate mousse",
+    "price": "6.50",
+    "category": "dessert",
+    "sizes": {
+      "s": {
+        "size": "50 g",
+        "add-price": "0.00"
+      },
+      "m": {
+        "size": "100 g",
+        "add-price": "0.50"
+      },
+      "l": {
+        "size": "200 g",
+        "add-price": "1.00"
+      }
+    },
+    "additives": [
+      {
+        "name": "Berries",
+        "add-price": "0.50"
+      },
+      {
+        "name": "Nuts",
+        "add-price": "0.50"
+      },
+      {
+        "name": "Jam",
+        "add-price": "0.50"
+      }
+    ]
+  }
 ]
