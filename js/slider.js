@@ -25,11 +25,13 @@ document.addEventListener('DOMContentLoaded', () => {
     btnNext.addEventListener('click', () => {
         currentSlide = (currentSlide + 1) % slides.length;
         updateSlider();
+        resetAutoplay();
     });
 
     btnPrev.addEventListener('click', () => {
         currentSlide = (currentSlide - 1 + slides.length) % slides.length;
         updateSlider();
+        resetAutoplay();
     });
 
     dots.forEach((dot, i) => {
@@ -45,8 +47,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     observer.observe(slider);
 
-    setInterval(() => {
+    let autoplay;
+
+    function nextSlide() {
+        resetAutoplay();
         currentSlide = (currentSlide + 1) % slides.length;
         updateSlider();
-    }, 6000);
+    }
+
+    function resetAutoplay() {
+        clearTimeout(autoplay)
+        
+        autoplay = setTimeout(nextSlide, 7300);
+    }
+    resetAutoplay();
 });
