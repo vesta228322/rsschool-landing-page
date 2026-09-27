@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const cardsContent = document.querySelector('.cards__content');
     const loadMore = document.querySelector('.load-more');
 
-    let cardsToShow = 4;
+    let cardsToShow = 8;
     let currentCategory = 'coffee';
 
 
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const category = e.currentTarget.dataset.category;
             currentCategory = category
 
-            cardsToShow = 4;
+            // cardsToShow = 4;
             renderCard(currentCategory);
         });
 
@@ -121,8 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const sizeBtn = e.target.closest('.size-btn');
         const additivesBtn = e.target.closest('.additives-btn');
         const priceElem = modal.querySelector('.total-price');
-        let sizePrice = 0;
-        let totalactiveAdditives = 0;
+        
         
         if (closeBtn) {
             closeModal();
@@ -141,24 +140,27 @@ document.addEventListener('DOMContentLoaded', () => {
             
             sizeBtn.classList.add('active');
 
-            const currentPrice = +priceElem.dataset.price;
-            sizePrice = +sizeBtn.dataset.price;
-            const totalPrice = currentPrice + sizePrice;
-            priceElem.textContent = `$${totalPrice.toFixed(2)}`;
+            updateTotal();
         }
 
         if (additivesBtn) {
             additivesBtn.classList.toggle('active');
-            const activeAdditives  = modal.querySelectorAll('.additives-btn.active');
-            console.log(activeAdditives);
-            
-            activeAdditives.forEach(item => {
-               totalactiveAdditives += +item.dataset.price;
-            });
-            console.log(totalactiveAdditives);
+            updateTotal();
         }
-
     });
+
+    function updateTotal() {
+        const priceElem = modal.querySelector('.total-price');
+        const basePrice = +priceElem.dataset.price;
+        const activeSize = modal.querySelector('.size-btn.active');
+        const sizePrice = activeSize ? +activeSize.dataset.price : 0;
+        const activeAdditives = modal.querySelectorAll('.additives-btn.active');
+        let additivesPrice = 0;
+        activeAdditives.forEach(item => {
+            additivesPrice += +item.dataset.price;
+        });
+        priceElem.textContent = `$${(basePrice + sizePrice + additivesPrice).toFixed(2)}`;
+    }
 
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
@@ -168,12 +170,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function openModal() {
         modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
+        // document.body.style.overflow = 'hidden';
     }
 
     function closeModal() {
         modal.classList.remove('active');
-        document.body.style.overflow = '';
+        // document.body.style.overflow = '';
     }
 
         function renderModal(id) {
