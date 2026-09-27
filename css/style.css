@@ -1110,6 +1110,7 @@ body {
   background-color: var(--color-bg-page);
   border: 1px solid var(--color-border-inverse);
   border-radius: 32px;
+  color: var(--color-text-primary);
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
