@@ -1,10 +1,11 @@
 'use strict';
 document.addEventListener('DOMContentLoaded', () => {
-    const slider = document.querySelector('.slider__wrapper'),
+    const slideContainer = document.querySelector('.slider__container'),
+          slider = slideContainer.querySelector('.slider__wrapper'),
           slides = slider.querySelectorAll('.slider__content'),
-          btnNext = document.querySelector('.btn-next'),
-          btnPrev = document.querySelector('.btn-prev'),
-          dots = document.querySelectorAll('.dot');
+          btnNext = slideContainer.querySelector('.btn-next'),
+          btnPrev = slideContainer.querySelector('.btn-prev'),
+          dots = slideContainer.querySelectorAll('.dot');
     
     let currentSlide = 0;
     
@@ -43,9 +44,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const observer = new ResizeObserver(() => {
        updateSlider(); 
+       console.log('изменение ширины!')
     });
 
-    observer.observe(slider);
+    observer.observe(slideContainer);
 
     let autoplay;
 
