@@ -35,14 +35,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const cardsContent = document.querySelector('.cards__content');
     const loadMore = document.querySelector('.load-more');
+    loadMore.style.display = 'none';
 
     let cardsToShow = 8;
     let currentCategory = 'coffee';
 
 
     loadMore.addEventListener('click', () => {
+        const cardCount = cardsData.filter(card => card.category === currentCategory).length;
+        if (cardsToShow >= cardCount) {
+            loadMore.style.display = 'none';
+            return;
+        }
         cardsToShow += 4;
         renderCard(currentCategory);
+
+        if (cardsToShow >= cardCount) {
+            loadMore.style.display = 'none';
+        }
     });
 
 
@@ -90,12 +100,29 @@ document.addEventListener('DOMContentLoaded', () => {
             e.currentTarget.classList.add('active');
 
             const category = e.currentTarget.dataset.category;
-            currentCategory = category
-
-            // cardsToShow = 4;
+            currentCategory = category;
             renderCard(currentCategory);
-        });
 
+            loadMore.style.display = 'inline-block';
+        });
+    });
+
+    let isMobile = window.innerWidth <= 768;
+
+    window.addEventListener('resize', () => {
+        const newIsMobile = window.innerWidth <= 768;
+        if (newIsMobile !== isMobile) {
+            if (newIsMobile) {
+                cardsToShow = 4;
+                loadMore.style.display = 'inline-block';
+            } else {
+                cardsToShow = 8;
+                loadMore.style.display = 'none';
+            }
+
+            renderCard(currentCategory);
+            isMobile = newIsMobile;
+        }
     });
 
     init();
@@ -115,29 +142,28 @@ document.addEventListener('DOMContentLoaded', () => {
         openModal();
     });
 
-    
+
     modal.addEventListener('click', (e) => {
         const closeBtn = e.target.closest('.modal__close');
         const sizeBtn = e.target.closest('.size-btn');
         const additivesBtn = e.target.closest('.additives-btn');
-        const priceElem = modal.querySelector('.total-price');
-        
-        
+
+
         if (closeBtn) {
             closeModal();
             return;
         }
-        
+
         if (e.target === modal) {
             closeModal();
         }
-        
+
         if (sizeBtn) {
             const sizeBtns = modal.querySelectorAll('.size-btn')
             sizeBtns.forEach(item => {
                 item.classList.remove('active');
             });
-            
+
             sizeBtn.classList.add('active');
 
             updateTotal();
@@ -178,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // document.body.style.overflow = '';
     }
 
-        function renderModal(id) {
+    function renderModal(id) {
 
         const modalContent = cardsData.find(card => {
             return card.id === +id;
@@ -186,15 +212,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         modal.innerHTML = '';
 
-        const currentPrice = +modalContent.price;
-        
         if (!modalContent) return;
         console.log(modalContent);
         const sizesHTML = Object.entries(modalContent.sizes).map(item => {
             const key = item[0];
             const sizeData = item[1];
             const activeClass = key === 's' ? 'active' : '';
-            
+
             return `
                 <button class="modal__option-btn size-btn ${activeClass}" data-price="${sizeData['add-price']}">
                     <span class="modal__circle">${key.toUpperCase()}</span>
@@ -202,7 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </button>
             `
         }).join('');
-        
+
         const additivesHTML = modalContent.additives.map((item, i) => {
             return `
                 <button class="modal__option-btn additives-btn" data-price="${item['add-price']}">
