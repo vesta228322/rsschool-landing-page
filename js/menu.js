@@ -35,36 +35,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const cardsContent = document.querySelector('.cards__content');
     const loadMore = document.querySelector('.load-more');
-    loadMore.style.display = 'none';
 
-    let cardsToShow = 8;
+    let isMobile = window.innerWidth <= 768;
+    let cardsToShow = 4;
     let currentCategory = 'coffee';
 
 
     loadMore.addEventListener('click', () => {
-        const cardCount = cardsData.filter(card => card.category === currentCategory).length;
-        if (cardsToShow >= cardCount) {
-            loadMore.style.display = 'none';
-            return;
-        }
         cardsToShow += 4;
         renderCard(currentCategory);
-
-        if (cardsToShow >= cardCount) {
-            loadMore.style.display = 'none';
-        }
     });
 
 
     function renderCard(category) {
 
         cardsContent.innerHTML = '';
-
         const filterCards = cardsData.filter(card => {
             return card.category === category;
         });
+        const limit = isMobile ? cardsToShow : filterCards.length;
 
-        const showCards = filterCards.slice(0, cardsToShow);
+        const showCards = filterCards.slice(0, limit);
+
+        if (isMobile && cardsToShow < filterCards.length) {
+            loadMore.style.display = 'inline-block';
+        } else {
+            loadMore.style.display = 'none';
+        }
 
         showCards.forEach(card => {
             cardsContent.innerHTML += `
@@ -101,27 +98,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const category = e.currentTarget.dataset.category;
             currentCategory = category;
+            cardsToShow = 4;
             renderCard(currentCategory);
-
-            loadMore.style.display = 'inline-block';
         });
     });
-
-    let isMobile = window.innerWidth <= 768;
 
     window.addEventListener('resize', () => {
         const newIsMobile = window.innerWidth <= 768;
         if (newIsMobile !== isMobile) {
             if (newIsMobile) {
                 cardsToShow = 4;
-                loadMore.style.display = 'inline-block';
-            } else {
-                cardsToShow = 8;
-                loadMore.style.display = 'none';
             }
-
-            renderCard(currentCategory);
+            
+            console.log(isMobile);
             isMobile = newIsMobile;
+            renderCard(currentCategory);
         }
     });
 
@@ -196,12 +187,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function openModal() {
         modal.classList.add('active');
-        // document.body.style.overflow = 'hidden';
+        document.body.style.overflow = 'hidden';
     }
 
     function closeModal() {
         modal.classList.remove('active');
-        // document.body.style.overflow = '';
+        document.body.style.overflow = '';
     }
 
     function renderModal(id) {
