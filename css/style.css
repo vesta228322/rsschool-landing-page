@@ -1476,7 +1476,6 @@ body {
     font-size: 44px;
   }
   .cards__tabs {
-    width: min(348px, 100% - 40px);
     gap: 8px;
   }
   .cards__item {
