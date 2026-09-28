@@ -1266,14 +1266,16 @@ body {
             justify-content: center;
     gap: 60px;
     padding-top: 60px;
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transition: opacity 0.3s ease, visibility 0.3s ease;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: -webkit-transform 0.45s ease;
+    transition: -webkit-transform 0.45s ease;
+    transition: transform 0.45s ease;
+    transition: transform 0.45s ease, -webkit-transform 0.45s ease;
   }
   .header__nav.open {
-    opacity: 1;
-    visibility: visible;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
   .header__nav-list {
     -webkit-box-orient: vertical;

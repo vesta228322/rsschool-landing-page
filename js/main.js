@@ -27,4 +27,32 @@ document.addEventListener('DOMContentLoaded', () => {
         btnLight.classList.add('active');
         btnDark.classList.remove('active');
     });
+
+    // БУРГЕР МЕНЮ
+
+    const menu = document.querySelector('.header__nav');
+    const burgerBtn = document.querySelector('.header__burger');
+    const navLinks = document.querySelectorAll('.header__nav-list a');
+
+    function closeMenu() {
+        menu.classList.remove('open');
+        burgerBtn.classList.remove('open');
+        document.body.style.overflow = '';
+    }
+
+    burgerBtn.addEventListener('click', () => {
+        if (burgerBtn.classList.contains('open')) {
+            closeMenu();
+        } else {
+            menu.classList.add('open');
+            burgerBtn.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            closeMenu();
+        });
+    });
 });
