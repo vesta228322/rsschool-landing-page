@@ -22,40 +22,43 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-
-    btnNext.addEventListener('click', () => {
+    
+    function nextSlide() {
         currentSlide = (currentSlide + 1) % slides.length;
         updateSlider();
         resetAutoplay();
-    });
+    }
 
-    btnPrev.addEventListener('click', () => {
+    function prevSlide() {
         currentSlide = (currentSlide - 1 + slides.length) % slides.length;
         updateSlider();
         resetAutoplay();
+    }
+
+    btnNext.addEventListener('click', () => {
+        nextSlide();
+    });
+
+    btnPrev.addEventListener('click', () => {
+        prevSlide();
     });
 
     dots.forEach((dot, i) => {
         dot.addEventListener('click', (e) => {
             currentSlide = i;
             updateSlider();
+            resetAutoplay();
         });
     });
 
     const observer = new ResizeObserver(() => {
        updateSlider(); 
-       console.log('изменение ширины!')
+       console.log('ширина изменилась!');
     });
 
     observer.observe(slideContainer);
 
     let autoplay;
-
-    function nextSlide() {
-        resetAutoplay();
-        currentSlide = (currentSlide + 1) % slides.length;
-        updateSlider();
-    }
 
     function resetAutoplay() {
         clearTimeout(autoplay)
@@ -63,4 +66,25 @@ document.addEventListener('DOMContentLoaded', () => {
         autoplay = setTimeout(nextSlide, 7300);
     }
     resetAutoplay();
+
+    let startX;
+    let endX;
+    slider.addEventListener('pointerdown', (e) => {
+        startX = e.clientX;
+    });
+
+    slider.addEventListener('pointerup', (e) => {
+        endX = e.clientX;
+        const deltaX = endX - startX;
+        
+        if (deltaX <= -130) {
+            nextSlide();
+            console.log('swipe left');
+        } else if (deltaX >= 130) {
+            prevSlide();
+            console.log('swipe right');
+        } else {
+            console.log('do nothing');
+        }
+    });
 });
