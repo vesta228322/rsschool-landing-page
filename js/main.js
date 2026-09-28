@@ -55,4 +55,10 @@ document.addEventListener('DOMContentLoaded', () => {
             closeMenu();
         });
     });
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeMenu();
+        }
+    });
 });
