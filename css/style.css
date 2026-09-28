@@ -1492,7 +1492,7 @@ body {
     grid-template-columns: 1fr;
   }
   .modal__info {
-    width: 342px;
+    width: 310px;
   }
   .modal__image {
     display: none;
