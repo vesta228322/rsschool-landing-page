@@ -1164,12 +1164,10 @@ body {
     .cards__title {
         width: min(688px, 100%);
     }
+
 }
 
 @media (max-width: 768px) {
-    body:has(.header__nav.open) {
-        overflow: hidden;
-    }
 
     .header__container {
         width: 100%;
@@ -1219,9 +1217,9 @@ body {
     }
 
     .header__menu-mobile {
+        display: flex;
         width: auto;
         margin-top: 40px;
-        display: flex;
         gap: 8px;
     }
 
@@ -1312,6 +1310,18 @@ body {
 
     .cards__content {
         grid-template-columns: repeat(2, minmax(0, 310px));
+    }
+
+    .modal {
+        z-index: 103;
+    }
+
+    .modal__info {
+        width: 326px;
+    }
+
+    .modal__buttons {
+        flex-wrap: wrap;
     }
 }
 
@@ -1435,6 +1445,18 @@ body {
 
     .container {
         width: calc(100% - 40px);
+    }
+    
+    .modal__content {
+        grid-template-columns: 1fr;
+    }
+
+    .modal__info {
+        width: 342px;
+    }
+
+    .modal__image {
+        display: none;
     }
 }
 
